@@ -107,7 +107,8 @@ button.remove:hover {
 
 .shape1,
 .shape2,
-.shape3 {
+.shape3,
+.shape0 {
 	position: relative;
 	width: 150px;
 	top: 5rem;
@@ -115,14 +116,19 @@ button.remove:hover {
 	margin-top: 0;
 }
 .shape2 {
-	width: 90px;
+	width: 110px;
 	top: 4rem;
 	left: -4.5rem;
 }
 .shape3 {
-	width: 180px;
+	width: 155px;
 	top: 5rem;
-	left: -5rem;
+	left: -4rem;
+}
+.shape0 {
+	width: 120px;
+	top: 4rem;
+	left: -4.5rem;
 }
 input[type="text"],
 input[type="email"],
@@ -213,7 +219,7 @@ ul.repo li::before {
 	}
 }
 @media only screen and (max-width: 500px) {
-	.shape1, .shape2, .shape3{
+	.shape1, .shape2, .shape3, .shape0{
 		/* flex-direction: column; */
 		width:30%;
 		align-self: center;
@@ -323,3 +329,32 @@ a.redirect{
 	text-decoration: none;
 	color: #000;
 }
+.accordion {
+	
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-family: "Amatic SC", cursive;
+	font-weight: 400;
+	font-size: 25px;
+	transition: 0.4s;
+  }
+  
+  /* .accordion:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+  } */
+  
+  .panel {
+	/* padding: 0 ; */
+	display: none;
+	background-color: none;
+	overflow: hidden;
+  }
+  button.accordion{
+	  background: none;
+  }
+

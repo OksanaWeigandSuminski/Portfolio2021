@@ -7,10 +7,11 @@ copyright.innerHTML = "&copy; " + thisYear + " Oksana Weigand-Suminski";
 footer.appendChild(copyright);
 
 var skills = [
-	"Information Graphics",
-	"Adobe Creative Cloud",
+	"Graphic Design",
 	"Web Design",
 	"Programming",
+	"Agile Software Development",
+	"Research"
 ];
 var skillsSection = document.getElementById("skills");
 var skillsList = skillsSection.querySelector("ul");
@@ -69,6 +70,22 @@ messageForm.addEventListener("submit", (event) => {
 
 	document.querySelector("form").reset();
 });
+
+// Accordion
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
 
 // AJAX
 // var githubRequest = new XMLHttpRequest();
