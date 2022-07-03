@@ -7,11 +7,13 @@ copyright.innerHTML = "&copy; " + thisYear + " Oksana Weigand-Suminski";
 footer.appendChild(copyright);
 
 var skills = [
+	"Programming",
 	"Graphic Design",
 	"Web Design",
-	"Programming",
-	"Agile Software Development",
-	"Research"
+	"Print Design",
+	"Infographics",
+	"Video Editing",
+	"Scientific Research"
 ];
 var skillsSection = document.getElementById("skills");
 var skillsList = skillsSection.querySelector("ul");
@@ -86,6 +88,20 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+//quotes
+jQuery(document).ready(function($) {
+	if (  $('.quote-loop').length ){
+	(function loop() {
+		$('.quote-loop').each(function() {
+			var $self = $(this);
+			$self.parent().queue(function (n) {
+				$self.fadeIn(1000).delay(5000).fadeOut(1000, n);
+			});
+		}).parent().promise().done(loop);
+	}());
+}	
+}); 
+//quotes end
 
 // AJAX
 // var githubRequest = new XMLHttpRequest();
@@ -138,3 +154,4 @@ if (
 		}
 	});
 }
+
